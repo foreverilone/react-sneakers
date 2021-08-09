@@ -7,8 +7,19 @@
   margin-bottom: 30px;
   transition: box-shadow 0.2s ease-in-out, transform 0.2s ease-in-out;
 
+  // .button {
+  //   background: #FFFFFF;
+  //   border: 1px solid #F2F2F2;
+  //   box-sizing: border-box;
+  //   border-radius: 8px;
+  //   width: 32px;
+  //   height: 32px;
+  //   cursor: pointer;
+  // }
+
   .plus {
     cursor: pointer;
+
   }
 
   &:hover {
