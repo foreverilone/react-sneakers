@@ -15,7 +15,7 @@ const Info = ({ title, image, description }) => {
       <h2>Корзина пустая</h2>
       <p className="opacity-6">Добавьте хотя бы одну пару кроссовок, чтобы сделать заказ</p>
       <button onClick={() => setCartOpened(false)} className="greenButton">
-        <img src="/img/arrow.svg" alt="Arrow" />
+        <img src="img/arrow.svg" alt="Arrow" />
         Вернуться назад
       </button>
     </div>

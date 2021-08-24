@@ -46,7 +46,7 @@ function Drawer({ onClose, onRemove, items = [], opened }) {
             onClick={onClose}
             className="removeBtn" 
             width={32} height={32} 
-            src="/img/btn-remove.svg" 
+            src="img/btn-remove.svg" 
             alt="Close" 
           />
         </h2>
@@ -102,7 +102,7 @@ function Drawer({ onClose, onRemove, items = [], opened }) {
               title={isOrderComplete ? "Заказ оформлен" : "Корзина пустая"}
               description={isOrderComplete ? 
                 `Ваш заказ #${orderID} скоро будет передан курьерской доставке` : "Добавьте хотя бы одну пару кроссовок, чтобы сделать заказ"}
-              image={isOrderComplete ? "/img/complete-order.jpg" : "/img/empty-cart.jpg"}
+              image={isOrderComplete ? "img/complete-order.jpg" : "img/empty-cart.jpg"}
             />
           )
         }
