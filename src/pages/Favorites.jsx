@@ -1,6 +1,13 @@
+import React from 'react';
 import Card from '../components/Card';
+import AppContext from '../context';
 
-function Favorites({ items, onAddToFavorite }) {
+
+function Favorites({ onAddToFavorite }) {
+  //если AppContext изменится, то все актуальные данные сохранятся в state
+  // и делается ререндер const state = React.useContext(AppContext);
+  const {favorites} = React.useContext(AppContext);
+
   return (
     <div className="content p-40">
       <div className="d-flex align-center justify-between mb-40">
@@ -9,17 +16,15 @@ function Favorites({ items, onAddToFavorite }) {
       </div>
 
       <div className="d-flex flex-wrap">
-        <div className="d-flex flex-wrap">
-          {items.map(item => (
-              <Card 
-                key={item.title}
-                favorited={true}
-                onFavorite={obj => onAddToFavorite(obj)}
-                {...item}
-              />
-          ))}
-        </div>
-        </div>
+        {favorites.map((item, index) => (
+            <Card 
+              key={index}
+              favorited={true}
+              onFavorite={obj => onAddToFavorite(obj)}
+              {...item}
+            />
+        ))}
+      </div>
       
     </div>
   );
